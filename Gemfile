@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use postgresql as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -27,19 +26,44 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Simple forms
+gem 'simple_form'
+
+# Required for Heroku
+gem 'rails_12factor', group: :production
+
+gem 'split', '~> 0.6.5', require: 'split/dashboard'
+gem 'haml'
+gem 'haml-rails'
+gem 'kaminari'
+gem 'sorted', '0.4.3'
+gem 'ga_cookie_parser'
+gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'angularjs-rails'
+gem 'httparty'
+gem 'redcarpet'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+group :test do
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'thin'
+  gem 'rspec'
+  gem 'factory_girl'
+  gem 'rspec-rails'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'compass-rails'
+gem 'exception_notification'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem "ransack", github: "ernie/ransack", branch: "rails-4"
+
