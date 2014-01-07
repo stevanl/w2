@@ -14,40 +14,15 @@
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
         %li.active
-          %a{href: "#"} Home
+          %a.active{href: "#"} Home
+      %ul.nav.navbar-nav.navbar-right
         %li
           %a{href: "#about"} About
         %li
           %a{href: "#contact"} Contact
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Dropdown
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "#"} Action
-            %li
-              %a{href: "#"} Another action
-            %li
-              %a{href: "#"} Something else here
-            %li.divider
-            %li.dropdown-header Nav header
-            %li
-              %a{href: "#"} Separated link
-            %li
-              %a{href: "#"} One more separated link
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{href: "../navbar/"} Default
-        %li
-          %a{href: "../navbar-static-top/"} Static top
-        %li.active
-          %a{href: "./"} Fixed top
-    / /.nav-collapse
 .container
-  / Main component for a primary marketing message or call to action
   .jumbotron
     %h1 Manliest things ever
     %p Want to know what the MANLIEST NAME EVER IS? How about the MANLIEST BURGER? Or the MANLIEST BEER? Well you've come to the right place amigo. Prepare the be out-manned!
     %p
-      %a.btn.btn-lg.btn-primary{href: "../../components/#navbar", role: "button"} Sign Up
+      %a.btn.btn-lg.btn-primary{href: "manly", role: "button"} MAN UP!
