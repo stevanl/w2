@@ -43,8 +43,6 @@ gem 'angularjs-rails'
 gem 'httparty'
 gem 'redcarpet'
 
-gem 'binding_of_caller'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -58,6 +56,7 @@ end
 group :development do
   gem 'awesome_print'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'thin'
   gem 'rspec'
   gem 'factory_girl'
