@@ -6,3 +6,10 @@ body {
   border-top: 1px #ddd solid;
   padding-top: 10px;
 }
+
+.alert-alert {
+  @extend .alert-danger;
+}
+.alert-notice {
+  @extend .alert-success;
+}
