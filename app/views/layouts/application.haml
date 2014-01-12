@@ -7,6 +7,7 @@
     = csrf_meta_tags
   %body
     .container
+      = render "shared/header", active: @active || "home"
       = render "shared/notices"
     = yield
     = render "layouts/footer"
