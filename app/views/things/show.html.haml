@@ -1,0 +1,12 @@
+.container
+  = image_tag "http://placehold.it/1170x640", class: "img-responsive"
+  %h1= @thing.name
+  = raw markdown(@thing.description)
+  .row
+    .col-xs-10= number_to_currency(@thing.price, precision: 2, unit: "£", format: "%u%n")
+    .col-xs-1= @thing.category
+    .col-xs-1= @thing.sub_category
+
+  = link_to 'Edit', edit_thing_path(@thing)
+  \|
+  = link_to 'Back', things_path

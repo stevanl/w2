@@ -1,0 +1,33 @@
+= form_for @thing, html: {class: "form-horizontal", role: "form"} do |f|
+  - if @thing.errors.any?
+    #error_explanation.panel.panel-danger
+      .panel-heading= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      .panel-body
+        %ul
+          - @company.errors.full_messages.each do |msg|
+            %li= msg
+
+  .form-group
+    %label.col-sm-2.control-label= f.label :name
+    .col-sm-10
+      = f.text_field :name, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :description
+    .col-sm-10
+      = f.text_area :description, class: "form-control", size: "10x5"
+  .form-group
+    %label.col-sm-2.control-label= f.label :price
+    .col-sm-10
+      .input-group
+        %span{class: "input-group-addon"} £
+        = f.text_field :price, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :category
+    .col-sm-10
+      = f.text_field :category, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :sub_category
+    .col-sm-10
+      = f.text_field :sub_category, class: "form-control"
+  .actions
+    = f.submit 'Save', class: "btn btn-primary"

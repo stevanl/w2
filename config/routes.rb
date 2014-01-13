@@ -1,4 +1,9 @@
 W2Manliest::Application.routes.draw do
+  resources :things
+
+  get 'stuff/:name' => 'things#show', as: :item
+  get ':category(/:sub-category)' => 'things#category', as: :category
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

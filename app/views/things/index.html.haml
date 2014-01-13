@@ -1,0 +1,29 @@
+%h1 Listing things
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Price
+    %th Price
+    %th Category
+    %th Sub category
+    %th
+    %th
+    %th
+
+  - @things.each do |thing|
+    %tr
+      %td= thing.name
+      %td= thing.description
+      %td= thing.price
+      %td= thing.price
+      %td= thing.category
+      %td= thing.sub_category
+      %td= link_to 'Show', thing
+      %td= link_to 'Edit', edit_thing_path(thing)
+      %td= link_to 'Destroy', thing, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Thing', new_thing_path
