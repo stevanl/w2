@@ -29,5 +29,9 @@
     %label.col-sm-2.control-label= f.label :sub_category
     .col-sm-10
       = f.text_field :sub_category, class: "form-control"
+  .form-group
+    %label.col-sm-2.control-label= f.label :homepage_url, "Homepage URL"
+    .col-sm-10
+      = f.text_field :homepage_url, class: "form-control"
   .actions
     = f.submit 'Save', class: "btn btn-primary"
