@@ -1,9 +1,6 @@
 W2Manliest::Application.routes.draw do
   resources :things
 
-  get 'stuff/:name' => 'things#show', as: :item
-  get ':category(/:sub-category)' => 'things#category', as: :category
-
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,6 +8,8 @@ W2Manliest::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'about' => 'home#about', as: :about
+  get 'stuff/:name' => 'things#show', as: :item
+  get ':category(/:sub-category)' => 'things#category', as: :category
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
