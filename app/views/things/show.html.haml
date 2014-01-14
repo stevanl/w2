@@ -1,11 +1,10 @@
 .container
   = image_tag "http://placehold.it/1170x640", class: "img-responsive"
-  .pull-right
+  .pull-right{style: "margin-top: 20px"}
     = link_to 'Edit', edit_thing_path(@thing), class: "btn btn-default"
-    = link_to 'Back', things_path, class: "btn btn-default"
   %h1= @thing.name.upcase
   = raw markdown(@thing.description.gsub("{url}", @thing.homepage_url.to_s).gsub("{name}", @thing.name.to_s))
-  .row
+  .row.meta-bar
     .col-xs-10= number_to_currency(@thing.price, precision: 2, unit: "£", format: "%u%n")
     .col-xs-1= @thing.category
     .col-xs-1= @thing.sub_category

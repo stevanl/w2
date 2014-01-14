@@ -1,9 +1,15 @@
 body {
   padding-top: 70px;
 }
-
+.meta-bar {
+  border-top: 1px $secondary solid;
+  border-bottom: 1px $secondary solid;
+  padding: 5px 0;
+  margin: 5px 0 20px 0;
+  font-weight: bold;
+}
 .footer {
-  border-top: 1px #ddd solid;
+  border-top: 1px $gray-lighter solid;
   padding-top: 10px;
 }
 
